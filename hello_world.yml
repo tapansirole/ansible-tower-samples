@@ -4,8 +4,6 @@
     - name: Hello Message
       debug:
         msg: "Hello World!"
-    - name: Install aptitude using apt
-      apt: name=aptitude state=latest update_cache=yes force_apt_get=yes
     - name: gcloud init
       script: install-java.sh "
       register: op
