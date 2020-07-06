@@ -5,7 +5,7 @@
       debug:
         msg: "Hello World!"
     - name: gcloud init
-      script: install-java.sh "
+      shell: ls
       register: op
     - debug:
        msg: "{{ op }}"
