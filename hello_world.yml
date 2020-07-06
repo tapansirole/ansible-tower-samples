@@ -5,7 +5,7 @@
       debug:
         msg: "Hello World!"
     - name: gcloud init
-      shell: ls
+      shell: hostnamectl
       register: op
     - debug:
        msg: "{{ op }}"
