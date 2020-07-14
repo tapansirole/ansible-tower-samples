@@ -1,18 +1,11 @@
 - name: Hello World Sample
-  hosts: localhost
+  hosts: all
   tasks:
     - name: Hello Message
       debug:
         msg: "Hello World!"
-    - name: Search for all running pods
-      k8s_info:
-        kind: Pod
-        field_selectors:
-                - status.phase=Running
+    - name: gcloud init
+      shell: ls
       register: op
     - debug:
        msg: "{{ op }}"
-
-
-
-
